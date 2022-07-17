@@ -9,8 +9,12 @@ use App\Actions\Jetstream\DeleteUser;
 use App\Actions\Jetstream\InviteTeamMember;
 use App\Actions\Jetstream\RemoveTeamMember;
 use App\Actions\Jetstream\UpdateTeamName;
+use App\Models\Admin;
 use Hotash\Authable\Providers\AuthableServiceProvider;
+use Hotash\Authable\Registrar;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Fortify\Features as FortifyFeatures;
+use Laravel\Jetstream\Features as JetstreamFeatures;
 use Laravel\Jetstream\Jetstream;
 
 class JetstreamServiceProvider extends ServiceProvider
@@ -22,7 +26,27 @@ class JetstreamServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        Registrar::add('admin', Admin::class, [
+            'fortify' => [
+                // FortifyFeatures::registration(),
+                FortifyFeatures::resetPasswords(),
+                FortifyFeatures::emailVerification(),
+                FortifyFeatures::updateProfileInformation(),
+                FortifyFeatures::updatePasswords(),
+                FortifyFeatures::twoFactorAuthentication([
+                    'confirm' => true,
+                    'confirmPassword' => true,
+                    'window' => 0,
+                ]),
+            ],
+            'jetstream' => [
+                JetstreamFeatures::termsAndPrivacyPolicy(),
+                JetstreamFeatures::profilePhotos(),
+                JetstreamFeatures::api(),
+                // JetstreamFeatures::teams(['invitations' => true]),
+                JetstreamFeatures::accountDeletion(),
+            ],
+        ]);
     }
 
     /**
