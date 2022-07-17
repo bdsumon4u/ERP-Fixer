@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8021034ba9b64c1987b21e89d18989c",
+    "content-hash": "9e3cbb48b48d10e567659462eec6bbca",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1037,6 +1037,81 @@
                 "source": "https://github.com/bdsumon4u/laravel-authable/tree/v1.0.0"
             },
             "time": "2022-07-17T13:52:41+00:00"
+        },
+        {
+            "name": "hotash/laravel-ignorable",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bdsumon4u/laravel-ignorable.git",
+                "reference": "43e74aab7f29ecfca3fbcdaca2fe9415b5f92318"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bdsumon4u/laravel-ignorable/zipball/43e74aab7f29ecfca3fbcdaca2fe9415b5f92318",
+                "reference": "43e74aab7f29ecfca3fbcdaca2fe9415b5f92318",
+                "shasum": ""
+            },
+            "type": "package",
+            "autoload": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "Hotash\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Ignorable package for Laravel.",
+            "support": {
+                "issues": "https://github.com/bdsumon4u/laravel-ignorable/issues",
+                "source": "https://github.com/bdsumon4u/laravel-ignorable/tree/v1.0.0"
+            },
+            "time": "2022-07-17T15:02:54+00:00"
+        },
+        {
+            "name": "hotash/laravel-x-foreign",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bdsumon4u/laravel-x-foreign.git",
+                "reference": "39d691d4f10a64bc7c3172d2257c7d09831a6bdd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bdsumon4u/laravel-x-foreign/zipball/39d691d4f10a64bc7c3172d2257c7d09831a6bdd",
+                "reference": "39d691d4f10a64bc7c3172d2257c7d09831a6bdd",
+                "shasum": ""
+            },
+            "require": {
+                "hotash/laravel-ignorable": "^1.0"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Hotash\\XForeign\\Providers\\XForeignServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hotash\\XForeign\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "xForeign package for Laravel.",
+            "support": {
+                "issues": "https://github.com/bdsumon4u/laravel-x-foreign/issues",
+                "source": "https://github.com/bdsumon4u/laravel-x-foreign/tree/v1.0.0"
+            },
+            "time": "2022-07-18T03:10:18+00:00"
         },
         {
             "name": "inertiajs/inertia-laravel",
