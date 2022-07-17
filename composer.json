@@ -11,6 +11,7 @@
         "hotash/laravel-x-foreign": "^1.0",
         "inertiajs/inertia-laravel": "^0.5.2",
         "laravel/framework": "^9.19",
+        "laravel/octane": "^1.2",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "tightenco/ziggy": "^1.0"
