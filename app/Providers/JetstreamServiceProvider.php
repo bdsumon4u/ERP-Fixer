@@ -51,7 +51,7 @@ class JetstreamServiceProvider extends ServiceProvider
 
         Registrar::add('seller', Seller::class, [
             'fortify' => [
-                // FortifyFeatures::registration(),
+                FortifyFeatures::registration(),
                 FortifyFeatures::resetPasswords(),
                 FortifyFeatures::emailVerification(),
                 FortifyFeatures::updateProfileInformation(),

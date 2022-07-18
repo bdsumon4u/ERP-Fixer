@@ -17,7 +17,7 @@ class SellerSeeder extends Seeder
         Seller::query()->firstOrCreate([
             'email' => 'seller@seller.com',
         ], [
-            'name' => 'aDmiN',
+            'name' => 'Seller',
             'password' => bcrypt('password'),
         ]);
     }

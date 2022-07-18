@@ -2,7 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use App\Providers\RouteServiceProvider;
 use Hotash\Authable\Middleware\RedirectIfAuthenticated as Middleware;
 
 class RedirectIfAuthenticated extends Middleware
@@ -16,6 +15,8 @@ class RedirectIfAuthenticated extends Middleware
      */
     protected function redirectTo($request, $as)
     {
-        return RouteServiceProvider::HOME;
+        $tenant = tenant() ? 'tenant.' : '';
+
+        return route($tenant.$as.'dashboard');
     }
 }
