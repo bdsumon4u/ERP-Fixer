@@ -1049,16 +1049,16 @@
         },
         {
             "name": "hotash/laravel-authable",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bdsumon4u/laravel-authable.git",
-                "reference": "e3f29d78e13ae36c5130d7b4e2b48391eb727cd2"
+                "reference": "3f7429947731986086c5dd25a213591eed76ebb7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bdsumon4u/laravel-authable/zipball/e3f29d78e13ae36c5130d7b4e2b48391eb727cd2",
-                "reference": "e3f29d78e13ae36c5130d7b4e2b48391eb727cd2",
+                "url": "https://api.github.com/repos/bdsumon4u/laravel-authable/zipball/3f7429947731986086c5dd25a213591eed76ebb7",
+                "reference": "3f7429947731986086c5dd25a213591eed76ebb7",
                 "shasum": ""
             },
             "require": {
@@ -1087,9 +1087,9 @@
             "description": "Authentication package for Laravel.",
             "support": {
                 "issues": "https://github.com/bdsumon4u/laravel-authable/issues",
-                "source": "https://github.com/bdsumon4u/laravel-authable/tree/v1.0.0"
+                "source": "https://github.com/bdsumon4u/laravel-authable/tree/v1.0.1"
             },
-            "time": "2022-07-17T13:52:41+00:00"
+            "time": "2022-07-19T05:10:05+00:00"
         },
         {
             "name": "hotash/laravel-ignorable",

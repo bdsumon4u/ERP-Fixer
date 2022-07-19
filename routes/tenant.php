@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +26,7 @@ Route::domain('admin.{domain}')->as('admin.')->group(function () {
         config('jetstream.auth_session'),
         'verified',
     ])->group(function () {
-        Route::get('/dashboard', function () {
-            return Inertia::render('Dashboard');
-        })->name('dashboard');
+        Route::get('/dashboard', \App\Http\Controllers\Tenant\Admin\DashboardController::class)->name('dashboard');
     });
 });
 
@@ -43,9 +40,7 @@ Route::domain('seller.{domain}')->as('seller.')->group(function () {
         config('jetstream.auth_session'),
         'verified',
     ])->group(function () {
-        Route::get('/dashboard', function () {
-            return Inertia::render('Dashboard');
-        })->name('dashboard');
+        Route::get('/dashboard', \App\Http\Controllers\Tenant\Seller\DashboardController::class)->name('dashboard');
     });
 });
 
@@ -58,7 +53,5 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', \App\Http\Controllers\Tenant\DashboardController::class)->name('dashboard');
 });
