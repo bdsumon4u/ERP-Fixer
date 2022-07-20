@@ -1,9 +1,9 @@
 <script setup>
-import AppLayout from '%/default/resources/js/Layouts/AppLayout.vue';
-import DeleteTeamForm from './Partials/DeleteTeamForm.vue';
-import JetSectionBorder from '@/Jetstream/SectionBorder.vue';
-import TeamMemberManager from './Partials/TeamMemberManager.vue';
-import UpdateTeamNameForm from './Partials/UpdateTeamNameForm.vue';
+import AppLayout from "%/default/resources/js/Layouts/AppLayout.vue";
+import JetSectionBorder from "@/Jetstream/SectionBorder.vue";
+import DeleteTeamForm from "@/Pages/Teams/Partials/DeleteTeamForm.vue";
+import TeamMemberManager from "@/Pages/Teams/Partials/TeamMemberManager.vue";
+import UpdateTeamNameForm from "@/Pages/Teams/Partials/UpdateTeamNameForm.vue";
 
 defineProps({
     team: Object,
@@ -31,7 +31,9 @@ defineProps({
                     :user-permissions="permissions"
                 />
 
-                <template v-if="permissions.canDeleteTeam && ! team.personal_team">
+                <template
+                    v-if="permissions.canDeleteTeam && !team.personal_team"
+                >
                     <JetSectionBorder />
 
                     <DeleteTeamForm class="mt-10 sm:mt-0" :team="team" />

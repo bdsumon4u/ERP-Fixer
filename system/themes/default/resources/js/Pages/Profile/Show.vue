@@ -1,11 +1,11 @@
 <script setup>
-import AppLayout from '%/default/resources/js/Layouts/AppLayout.vue';
-import DeleteUserForm from './Partials/DeleteUserForm.vue';
-import JetSectionBorder from '@/Jetstream/SectionBorder.vue';
-import LogoutOtherBrowserSessionsForm from './Partials/LogoutOtherBrowserSessionsForm.vue';
-import TwoFactorAuthenticationForm from './Partials/TwoFactorAuthenticationForm.vue';
-import UpdatePasswordForm from './Partials/UpdatePasswordForm.vue';
-import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm.vue';
+import AppLayout from "%/default/resources/js/Layouts/AppLayout.vue";
+import JetSectionBorder from "@/Jetstream/SectionBorder.vue";
+import DeleteUserForm from "@/Pages/Profile/Partials/DeleteUserForm.vue";
+import LogoutOtherBrowserSessionsForm from "@/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue";
+import TwoFactorAuthenticationForm from "@/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue";
+import UpdatePasswordForm from "@/Pages/Profile/Partials/UpdatePasswordForm.vue";
+import UpdateProfileInformationForm from "@/Pages/Profile/Partials/UpdateProfileInformationForm.vue";
 
 defineProps({
     confirmsTwoFactorAuthentication: Boolean,
@@ -35,7 +35,11 @@ defineProps({
                     <JetSectionBorder />
                 </div>
 
-                <div v-if="$page.props.jetstream.canManageTwoFactorAuthentication">
+                <div
+                    v-if="
+                        $page.props.jetstream.canManageTwoFactorAuthentication
+                    "
+                >
                     <TwoFactorAuthenticationForm
                         :requires-confirmation="confirmsTwoFactorAuthentication"
                         class="mt-10 sm:mt-0"
@@ -44,9 +48,14 @@ defineProps({
                     <JetSectionBorder />
                 </div>
 
-                <LogoutOtherBrowserSessionsForm :sessions="sessions" class="mt-10 sm:mt-0" />
+                <LogoutOtherBrowserSessionsForm
+                    :sessions="sessions"
+                    class="mt-10 sm:mt-0"
+                />
 
-                <template v-if="$page.props.jetstream.hasAccountDeletionFeatures">
+                <template
+                    v-if="$page.props.jetstream.hasAccountDeletionFeatures"
+                >
                     <JetSectionBorder />
 
                     <DeleteUserForm class="mt-10 sm:mt-0" />
