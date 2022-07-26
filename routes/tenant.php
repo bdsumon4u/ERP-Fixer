@@ -27,6 +27,7 @@ Route::domain('admin.{domain}')->as('admin.')->group(function () {
         'verified',
     ])->group(function () {
         Route::get('/dashboard', \App\Http\Controllers\Tenant\Admin\DashboardController::class)->name('dashboard');
+        Route::resource('/brands', \App\Http\Controllers\Tenant\Admin\BrandController::class);
     });
 });
 

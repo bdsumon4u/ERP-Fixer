@@ -16,6 +16,11 @@ const items = [
         icon: HomeIcon,
         href: route("tenant.admin.dashboard"),
     },
+    {
+        id: "brands",
+        name: "Brands",
+        href: route("tenant.admin.brands.index"),
+    },
 ];
 </script>
 
